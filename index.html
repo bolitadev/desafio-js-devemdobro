@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+
+    <!-- fonts-google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- button  -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <title>Formulário de Contato</title>
+  </head>
+
+  <body style="background-color: black">
+    <section class="formulario">
+      <div class="textos">
+        <h2>FICOU COM DÚVIDA?<br />NOS MANDE UMA MENSAGEM!</h2>
+        <p>
+          caso tenha ficado com qualquer dúvida<br />
+          basta nos mandar uma mensagem e<br />
+          entraremos em contato em menos de 24h.
+        </p>
+      </div>
+      <form id="meuForm">
+        <p class="aviso">*Campos Obrigatórios</p>
+        <div class="campo">
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="inputs required"
+            placeholder="Nome Completo *"
+            oninput="nameValidate()"
+          />
+          <span class="span-required">Você deve preencher este campo*</span>
+        </div>
+        <div class="campo">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="inputs required"
+            placeholder="exemplo@gmail.com"
+          />
+          <span class="span-required">Você deve preencher este campo*</span>
+        </div>
+        <div class="campo">
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            class="inputs required"
+            placeholder="Telefone *"
+          />
+          <span class="span-required">Você deve preencher este campo*</span>
+        </div>
+        <div class="campo">
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            class="inputs required"
+            placeholder="Digite aqui sua Mensagem..."
+          ></textarea>
+          <span class="span-required">Você deve preencher este campo*</span>
+        </div>
+
+        <button class="btn" id="btn">
+          <i class="fa fa-paper-plane-o fa-2x send" aria-hidden="true"></i>
+          <i class="fa fa-paper-plane-o fa-2x send2" aria-hidden="true"></i>
+          <p>enviar</p>
+        </button>
+      </form>
+    </section>
+
+    <script src="./javascript.js"></script>
+  </body>
+</html>
